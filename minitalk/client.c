@@ -6,7 +6,7 @@
 /*   By: sgmih <sgmih@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 10:12:15 by sgmih             #+#    #+#             */
-/*   Updated: 2025/02/07 11:56:04 by sgmih            ###   ########.fr       */
+/*   Updated: 2025/02/12 17:31:09 by sgmih            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,13 @@ void	send_signal(int pid, char c)
 	int	j;
 
 	j = 0;
-	usleep(42);
 	while (j++ < 8)
 	{
 		if (((c >> (8 - j)) & 1) == 1)
 			kill (pid, SIGUSR2);
 		else
 			kill (pid, SIGUSR1);
-		usleep(255);
+		usleep(800);
 	}
 }
 
@@ -46,7 +45,6 @@ int	main(int argc, char **argv)
 	while (argv[2][i])
 	{
 		send_signal(pid, argv[2][i]);
-		usleep(42);
 		i++;
 	}
 	send_signal(pid, '\0');
