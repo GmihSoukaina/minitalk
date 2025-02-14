@@ -6,7 +6,7 @@
 /*   By: sgmih <sgmih@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 09:18:31 by sgmih             #+#    #+#             */
-/*   Updated: 2025/02/13 14:41:36 by sgmih            ###   ########.fr       */
+/*   Updated: 2025/02/14 10:40:51 by sgmih            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,8 +90,6 @@ int main(void)
     // Register the signal handler for SIGUSR1 and SIGUSR2
 	sigaction(SIGUSR1, &sig, 0);
 	sigaction(SIGUSR2, &sig, 0);
-    
-    
 	while (1)
 		pause();
 	return (0);
