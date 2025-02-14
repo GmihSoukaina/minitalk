@@ -6,7 +6,7 @@
 /*   By: sgmih <sgmih@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 10:12:15 by sgmih             #+#    #+#             */
-/*   Updated: 2025/02/14 10:21:48 by sgmih            ###   ########.fr       */
+/*   Updated: 2025/02/14 13:43:13 by sgmih            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int	main(int argc, char **argv)
 	int		i;
 	pid_t	pid;
 
-    i = 0;
+	i = 0;
 	if (argc != 3 || ft_atoi(argv[1]) == 0)
 	{
 		ft_printf ("\nInput no valid \tEnter:  ~ PID   MSG ~ \n");
