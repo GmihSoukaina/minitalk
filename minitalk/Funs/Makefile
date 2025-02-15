@@ -10,16 +10,16 @@ OFuns = $(Funs:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OFuns)
-	ar rc ${NAME} $(OFuns)
+	@ar rc ${NAME} $(OFuns)
 	
 %.o: %.c ft_printf.h
-	$(C_Compiler) $(CFLAGS) -c $< -o $@
+	@$(C_Compiler) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OFuns)
+	@$(RM) $(OFuns)
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re: fclean all
 
